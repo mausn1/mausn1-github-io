@@ -8,11 +8,22 @@ body {
   font-family: vga;
   width:100vw;
   height: 100vh;
+  margin: 0;
 }
 
 img {
   position: absolute;
   inset: 50% 0 0 50%;
+  animation: move 4s;
+}
+
+@keyframes move {
+    from {
+        transform: translate(15px,70px);
+    }
+    to{
+        transform: translate(0);
+    }
 }
 
 .p {
