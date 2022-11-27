@@ -1,6 +1,11 @@
+@font-face {
+    font-family:'vga';
+    src:url("Perfect\ DOS\ VGA\ 437.ttf");
+   }
+
 body {
   background-color: #e4e4e4;
-  font-family: spleen;
+  font-family: vga;
   width:100vw;
   height: 100vh;
 }
