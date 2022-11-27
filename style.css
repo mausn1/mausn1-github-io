@@ -1,9 +1,130 @@
 body {
-    background-color: #e4e4e4;
+  background-color: #e4e4e4;
+  font-family: spleen;
+  width:100vw;
+  height: 100vh;
 }
 
-.img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+img {
+  position: absolute;
+  inset: 50% 0 0 50%;
+}
+
+.p {
+  position: absolute;
+  margin-left: auto;
+  inset: 50% 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  background-color: #000; 
+  color: #e4e4e4 !important;
+}
+
+/* Fix media query for TV */
+/* typewriter */
+
+.box {
+  margin-top: 50vh;
+}
+
+.typewriter,
+.writing, 
+.typewriter2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+.writing {
+  animation: blink 0.6s steps(10);
+  animation-iteration-count: 3;
+  color: #e4e4e4;
+  animation-delay: 6s;
+}
+
+.typewriter::before,
+.typewriter::after,
+.typewriter2::before,
+.typewriter2::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.hidden {
+  display:none;
+}
+
+.typewriter::before {
+  background: #e4e4e4;
+  animation: typewriter 1s steps(10) forwards 3s;
+}
+
+.typewriter::after {
+  background: #000;
+  width: 8px;
+  animation: typewriter 1s steps(10) forwards 3s;
+}
+
+.typewriter2::before {
+  background: #e4e4e4 !important;
+  animation: typewriter2 1s steps(8) forwards 8s, typewriter3 1s steps(4) forwards 9.5s;
+}
+
+.typewriter2::after {
+  background: #e4e4e4;
+  width: 8px;
+  animation: typewriter2 1s steps(8) forwards 8s, typewriter3 1s steps(4) forwards 9.5s;
+}
+
+@keyframes typewriter {
+  to {
+  left: 100%;
+  }
+}
+
+@keyframes typewriter2 {
+from {
+  background: #000;
+  left: 0%;
+}
+to{
+  background: #000;
+  left: 65%;
+ }
+}
+
+@keyframes typewriter3 {
+from{
+  background: #000;
+  left: 65%;
+}
+  to {
+  background: #000;
+  left: 100%;
+  }
+}
+@keyframes blink {
+  from{
+  color: #000;
+ }
+  to {
+  color: #000 !important;
+  }
+}
+
+/* fix */
+@keyframes glitch {
+from{
+}
+to{
+}
 }
