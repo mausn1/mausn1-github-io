@@ -16,6 +16,7 @@ body {
 }
 
 .tv-img {
+  image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
   position: absolute;
   inset: 50% 0 0 50%;
