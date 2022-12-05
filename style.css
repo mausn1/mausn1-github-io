@@ -5,14 +5,12 @@
 
 body {
   background-color: #e4e4e4;
-  font-family: vga;
-  width:100vw;
+  font-family: spleen;
+  width: 100vw;
   margin: 0;
 }
 
-
-
-.shake{
+.shake {
   animation: shake 0.1s 10s;
   animation-iteration-count: 5;
 }
@@ -24,15 +22,28 @@ body {
   z-index: -1;
 }
 
-.hole-img {
+.hole, .link {
   position: absolute;
-  width: 300px;
-  display:none;
+  background-color: #000;
+  width: 100px;
+  height: 100px;
   inset: 0;
+  clip-path: polygon(
+    53% 0,
+    85% 14%,
+    80% 34%,
+    92% 46%,
+    73% 61%,
+    73% 84%,
+    34% 76%,
+    31% 55%,
+    10% 41%,
+    44% 28%
+  );
   display: none;
 }
 
-a{
+a {
   position: absolute;
   width: 100px;
   inset: 0;
@@ -47,64 +58,64 @@ a{
 }
 
 @keyframes shake {
-from {
-  transform: translate(0);
+  from {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-2px, -3px) rotate(0deg);
+  }
+  30% {
+    transform: translate(-3px, -4px) rotate(1deg);
+  }
+  40% {
+    transform: translate(-4px, -2px) rotate(-1deg);
+  }
+  50% {
+    transform: translate(-5px, -5px) rotate(-2deg);
+  }
+  60% {
+    transform: translate(-4px, -6px) rotate(2deg);
+  }
+  70% {
+    transform: translate(-3px, -5px) rotate(0deg);
+  }
+  80% {
+    transform: translate(-2px, -4px) rotate(1deg);
+  }
+  90% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  100% {
+    transform: translate(-1px, -2px) rotate(0deg);
+  }
 }
-10% {
-  transform: translate(-1px,-2px) rotate(-2deg);
-}
-20% {
-  transform: translate(-2px,-3px) rotate(0deg);
-}
-30% {
-  transform: translate(-3px,-4px) rotate(1deg);
-}
-40% {
-  transform: translate(-4px,-2px) rotate(-1deg);
-}
-50% {
-  transform: translate(-5px,-5px) rotate(-2deg);
-}
-60% {
-  transform: translate(-4px,-6px) rotate(2deg);
-}
-70% {
-  transform: translate(-3px,-5px) rotate(0deg);
-}
-80% {
-  transform: translate(-2px,-4px) rotate(1deg);
-}
-90% {
-  transform: translate(-1px,-2px) rotate(-2deg);
-}
-100% {
-  transform: translate(-1px,-2px) rotate(0deg);
-}
-}
-
 
 @keyframes move {
-from {
-  transform: translate(350px,70px);
-}
-to {
-  transform: translate(0);
-}
+  from {
+    transform: translate(350px, 70px);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 
+/* Fix media query for TV */
+/* typewriter */
 
 .box {
   margin-top: 50vh;
 }
 
 .typewriter,
-.writing, 
+.writing,
 .typewriter2 {
   position: relative;
   width: fit-content;
   margin: 0 auto;
 }
-
 
 .writing {
   animation: blink 0.6s steps(10);
@@ -116,14 +127,14 @@ to {
 .typewriter::before,
 .typewriter::after,
 .typewriter2::before,
-.typewriter2::after{
+.typewriter2::after {
   content: "";
   position: absolute;
   inset: 0;
 }
 
 .hidden {
-  display:none;
+  display: none;
 }
 
 .typewriter::before {
@@ -139,47 +150,49 @@ to {
 
 .typewriter2::before {
   background: #e4e4e4 !important;
-  animation: typewriter2 1s steps(8) forwards 8s, typewriter3 1s steps(4) forwards 9.5s;
+  animation: typewriter2 1s steps(8) forwards 8s,
+    typewriter3 1s steps(4) forwards 9.5s;
 }
 
 .typewriter2::after {
   background: #e4e4e4;
   width: 8px;
-  animation: typewriter2 1s steps(8) forwards 8s, typewriter3 1s steps(4) forwards 9.5s;
+  animation: typewriter2 1s steps(8) forwards 8s,
+    typewriter3 1s steps(4) forwards 9.5s;
 }
 
 @keyframes typewriter {
   to {
-  left: 100%;
+    left: 100%;
   }
 }
 
 @keyframes typewriter2 {
-from {
-  background: #000;
-  left: 0%;
-}
-to{
-  background: #000;
-  left: 65%;
- }
+  from {
+    background: #000;
+    left: 0%;
+  }
+  to {
+    background: #000;
+    left: 65%;
+  }
 }
 
 @keyframes typewriter3 {
-from{
-  background: #000;
-  left: 65%;
-}
+  from {
+    background: #000;
+    left: 65%;
+  }
   to {
-  background: #000;
-  left: 100%;
+    background: #000;
+    left: 100%;
   }
 }
 @keyframes blink {
-  from{
-  color: #000;
- }
+  from {
+    color: #000;
+  }
   to {
-  color: #000 !important;
+    color: #000 !important;
   }
 }
