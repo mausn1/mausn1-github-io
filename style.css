@@ -16,6 +16,7 @@ body {
 }
 
 .tv-img {
+  image-rendering: pixelated;
   position: absolute;
   inset: 50% 0 0 50%;
   animation: move 3s, shake 0.2s 10s;
