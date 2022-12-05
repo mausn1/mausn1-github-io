@@ -5,6 +5,11 @@
 }
 
 
+@font-face {
+    font-family:'vga';
+    src:url("/Perfect\ DOS\ VGA\ 437.ttf");
+   }
+
 body {
   font-family: spleen;
   margin: auto;
