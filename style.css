@@ -1,11 +1,11 @@
 @font-face {
-    font-family:'vga';
-    src:url("Perfect\ DOS\ VGA\ 437.ttf");
+    font-family:'loool';
+    src:url("Flexi_IBM_VGA_False.ttf");
    }
 
 body {
   background-color: #e4e4e4;
-  font-family: vga;
+  font-family: loool;
   width: 100vw;
   margin: 0;
 }
