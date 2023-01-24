@@ -6,12 +6,12 @@
 
 
 @font-face {
-    font-family:'vga';
-    src:url("/Perfect\ DOS\ VGA\ 437.ttf");
+    font-family:'loool';
+    src:url("Flexi_IBM_VGA_False.ttf");
    }
 
 body {
-  font-family: vga;
+  font-family: loool;
   margin: auto;
   width: 75%;
   height: 100%;
